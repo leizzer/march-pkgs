@@ -1,11 +1,12 @@
 #!/bin/bash
 # WARNING: this script will destroy data on the selected disk.
 # This script can be run by executing the following:
-#   curl -sL https://git.io/vNxbN | bash
+#   curl -sL https://raw.githubusercontent.com/leizzer/march-pkgs/master/arch-installer.sh | bash
+
 set -uo pipefail
 trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
 
-REPO_URL="https://s3.eu-west-2.amazonaws.com/mdaffin-arch/repo/x86_64"
+REPO_URL="https://raw.githubusercontent.com/leizzer/march/master/x86_64"
 
 ### Get infomation from user ###
 hostname=$(dialog --stdout --inputbox "Enter hostname" 0 0) || exit 1
