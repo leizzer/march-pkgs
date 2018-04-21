@@ -66,17 +66,17 @@ mount "${part_boot}" /mnt/boot
 
 ### Install and configure the basic system ###
 cat >>/etc/pacman.conf <<EOF
-[mdaffin]
+[leizzer]
 SigLevel = Optional TrustAll
 Server = $REPO_URL
 EOF
 
-pacstrap /mnt mdaffin-desktop
+pacstrap /mnt lei-base
 genfstab -t PARTUUID /mnt >> /mnt/etc/fstab
 echo "${hostname}" > /mnt/etc/hostname
 
 cat >>/mnt/etc/pacman.conf <<EOF
-[mdaffin]
+[leizzer]
 SigLevel = Optional TrustAll
 Server = $REPO_URL
 EOF
@@ -96,8 +96,8 @@ EOF
 
 echo "LANG=en_GB.UTF-8" > /mnt/etc/locale.conf
 
-arch-chroot /mnt useradd -mU -s /usr/bin/zsh -G wheel,uucp,video,audio,storage,games,input "$user"
-arch-chroot /mnt chsh -s /usr/bin/zsh
+arch-chroot /mnt useradd -mU -s /usr/bin/bash -G wheel,uucp,video,audio,storage,games,input "$user"
+arch-chroot /mnt chsh -s /usr/bin/bash
 
 echo "$user:$password" | chpasswd --root /mnt
 echo "root:$password" | chpasswd --root /mnt
