@@ -15,6 +15,7 @@ depends=(
 'cryptsetup'
 'device-mapper'
 'dhcpcd'
+'dialog'
 'diffutils'
 'e2fsprogs'
 'file'
