@@ -66,17 +66,17 @@ mount "${part_boot}" /mnt/boot
 
 ### Install and configure the basic system ###
 cat >>/etc/pacman.conf <<EOF
-[mdaffin]
+[leizzer]
 SigLevel = Optional TrustAll
 Server = $REPO_URL
 EOF
 
-pacstrap /mnt mdaffin-desktop
+pacstrap /mnt leiz-base
 genfstab -t PARTUUID /mnt >> /mnt/etc/fstab
 echo "${hostname}" > /mnt/etc/hostname
 
 cat >>/mnt/etc/pacman.conf <<EOF
-[mdaffin]
+[leizzer]
 SigLevel = Optional TrustAll
 Server = $REPO_URL
 EOF
