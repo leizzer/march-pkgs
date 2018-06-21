@@ -1,0 +1,14 @@
+pkgname=lei-notebook
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="mArch: Packages for XPS 15"
+arch=('any')
+url="https://github.com/leizzer/march-pkgs"
+license=('MIT')
+depends=(
+'bbswitch'
+'bumblebee'
+'nvidia'
+'mesa'
+'xf86-video-intel'
+)

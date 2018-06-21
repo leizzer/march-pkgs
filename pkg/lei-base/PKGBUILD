@@ -35,6 +35,7 @@ depends=(
 'man-db'
 'man-pages'
 'mdadm'
+'vi'
 'nano'
 'netctl'
 'pacman'
@@ -55,8 +56,4 @@ depends=(
 'util-linux'
 'which'
 'xfsprogs'
-
-'neovim'
-'fish'
-'ack'
 )
