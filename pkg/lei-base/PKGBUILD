@@ -56,4 +56,6 @@ depends=(
 'util-linux'
 'which'
 'xfsprogs'
+
+'ntfs-3g'
 )
